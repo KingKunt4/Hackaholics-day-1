@@ -34,3 +34,12 @@ document.getElementById('password2').addEventListener('input', function(){
     icon.alt = isMatch ? "valid" : "invalid";
     icon.style.opacity = "1";
 });
+
+function showSideBar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+}
+function hideSideBar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none'
+}

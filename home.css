@@ -1,0 +1,128 @@
+*{
+    --background-color: #f5e8fa;
+    --accent-color: #c071c5;
+    --shadow:  #cec4d3;
+}
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-blend-mode: overlay;
+    background-image: url('res/icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 7px 7px 14px var(--shadow);
+}
+header img{
+    width: 3em;
+}
+nav ul{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+nav img{
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(99, 95, 101);
+    font-weight: 500;
+    border-bottom: 1px solid var(--background-color);
+}
+nav ul li a:hover{
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+.signup-btn{
+    color: white;
+    background-color: var(--accent-color);
+    padding: 9px;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    animation: fade-in 1s forwards;
+    transition: 0.3s;
+}
+.signup-btn:hover{
+    background-color: transparent;
+    color: var(--accent-color);
+}
+.sidebar{
+    display: none;
+    position:absolute;
+    top: 0;
+    right: 0;
+    height: 80vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50vw;
+    font-size: 1em;
+    box-shadow: 0px 1px 1px 2px var(--shadow);
+}
+.sidebar img{
+    width: 15px;
+    height: 15px;
+}
+.sidebar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: split 1s forwards;
+    transition: 0.3s;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: rgb(99, 95, 101);
+    font-weight: 500;
+    border-bottom: 1px solid var(--background-color);
+}
+.sidebar ul li a:hover{
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+.sb-signup-btn{
+    color: var(--accent-color);
+}
+footer{
+    margin-top: calc(100vh/1.2);
+}
+@media (max-width: 800px) {
+    .hide-on-mobile{
+        display: none;
+    }
+
+    nav img{
+        display: block;
+    }
+}
+@keyframes fade-in{
+    from{
+        background-color: transparent;
+    }
+    to{
+        background-color: var(--accent-color);
+    }
+}
+@keyframes split{
+    from{
+        gap: 0;
+    }
+    to{
+        gap: 20px;
+    }
+}

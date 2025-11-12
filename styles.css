@@ -92,7 +92,6 @@ span{
     width: 0.7em;
     height: 0.7em;
 }
-
 @keyframes drop {
     from{
         top: -2em;

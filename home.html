@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <link rel="icon" href="res/" type="image/x-icon">
+        <title>Home | HACKAHOLICS</title>
+    </head>
+    <body>
+        <header>
+            <img src="res/icon.png" alt="icon">
+            <nav>
+                <ul>
+                    <li class="hide-on-mobile"><a href="#projects">projects</a></li>
+                    <li class="hide-on-mobile"><a href="#spaces">spaces</a></li>
+                    <li class="hide-on-mobile"><a href="#discover">discover</a></li>
+                    <li class="hide-on-mobile"><a  class="signup-btn" href="signup.html">sign up</a></li>
+                    <li class="hide-on-desktop" onclick="showSideBar()"><img class="burger" src="res/align-left.png" alt="burger"></li>
+                </ul>
+            </nav>
+            <div class="sidebar">
+                <ul>
+                    <li onclick="hideSideBar()"><img class="cross" src="res/cross.png" alt="cross"></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#spaces">spaces</a></li>
+                    <li><a href="#discover">discover</a></li>
+                    <li><a class="sb-signup-btn" href="signup.html">sign up</a></li>
+                </ul>
+            </div>
+        </header>
+        <footer>
+            <p style="text-align: center; font-weight: 200;">© 2025 Hackaholics UI. All rights reserved</p>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
