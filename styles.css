@@ -60,7 +60,6 @@ button{
     background-color: var(--accent-color);
 }
 button:hover{
-    color: var(--accent-color);
     background-color: transparent;
     border: 1px solid var(--accent-color);
     transition: 0.3s;

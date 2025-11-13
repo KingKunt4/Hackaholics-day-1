@@ -41,5 +41,5 @@ function showSideBar(){
 }
 function hideSideBar(){
     const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none'
+    sidebar.style.display = 'none';
 }

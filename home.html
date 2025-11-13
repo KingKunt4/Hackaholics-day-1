@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="home.css">
-        <link rel="icon" href="res/" type="image/x-icon">
+        <link rel="icon" href="res/icon.png" type="image/x-icon">
         <title>Home | HACKAHOLICS</title>
     </head>
     <body>
@@ -16,7 +16,7 @@
                     <li class="hide-on-mobile"><a href="#spaces">spaces</a></li>
                     <li class="hide-on-mobile"><a href="#discover">discover</a></li>
                     <li class="hide-on-mobile"><a  class="signup-btn" href="signup.html">sign up</a></li>
-                    <li class="hide-on-desktop" onclick="showSideBar()"><img class="burger" src="res/align-left.png" alt="burger"></li>
+                    <li class="hide-on-desktop" onclick="showSideBar()"><img class="burger" src="res/burger.png" alt="burger"></li>
                 </ul>
             </nav>
             <div class="sidebar">
@@ -29,8 +29,25 @@
                 </ul>
             </div>
         </header>
+        <section  onclick="hideSideBar()" class="hero">
+            <span><h1>become a <strong>HACKAHOLIC</strong> .</h1></span>
+            <p>Join Thousands of designers and developers around the world. collaborate, discover and connect. All on one platform.</p>
+            <div class="hero-img">
+                <div><img src="res/collab-img.jpg">
+                    <p>Collaborate with developers of every level, upskill and share ideas and knowledge.</p>
+                </div>
+                <div><img src="res/moqups.jpg">
+                    <p>Discover designers the world over. From newbies to gurus and in between. Learn from the greats and find people to mentor.</p>
+                </div>
+                <div><img src="res/phase-diagram.jpg">
+                    <p>Connect with people of like mind anywhere in the world. Create a space, start a project or join existing ones.</p>
+                </div>
+                <a href="signup.html">Join Now</a>
+            </div>
+            
+        </section>
         <footer>
-            <p style="text-align: center; font-weight: 200;">© 2025 Hackaholics UI. All rights reserved</p>
+            <p style="text-align: center; font-weight: 200;">@ 2025 Hackaholics UI. All rights reserved</p>
         </footer>
         <script src="app.js"></script>
     </body>

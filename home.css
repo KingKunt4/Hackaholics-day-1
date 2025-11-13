@@ -2,6 +2,7 @@
     --background-color: #f5e8fa;
     --accent-color: #c071c5;
     --shadow:  #cec4d3;
+    --font-color: #7b747f;
 }
 body{
     position: relative;
@@ -65,13 +66,12 @@ nav ul li a:hover{
     position:absolute;
     top: 0;
     right: 0;
-    height: 80vh;
+    height: 50vh;
     background-color: white;
     flex-direction: column;
     align-items: flex-start;
     width: 50vw;
     font-size: 1em;
-    box-shadow: 0px 1px 1px 2px var(--shadow);
 }
 .sidebar img{
     width: 15px;
@@ -82,8 +82,8 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    animation: split 1s forwards;
-    transition: 0.3s;
+    animation: split 0.5s forwards;
+    transition: 0.3s smooth;
 }
 .sidebar ul li a{
     text-decoration: none;
@@ -99,8 +99,65 @@ nav ul li a:hover{
     color: var(--accent-color);
 }
 footer{
-    margin-top: calc(100vh/1.2);
+    margin-top: 40px;
 }
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: calc(100vh/20);
+    text-align: center;
+    color: var(--font-color)
+}
+strong{
+    color: var(--accent-color)
+}
+.hero-img{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 500px));
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
+    height: auto;
+}
+.hero-img div{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px var(--shadow);
+    transition: 0.5s;
+}
+.hero-img div:hover{
+    transform: translateY(-5px);
+}
+.hero-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.hero a{
+    margin-top: 2em;
+    max-height: 1.5em;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    padding: 0.5em;
+    font-weight: 500;
+    border-radius: 1em;
+    background: linear-gradient(to left, var(--accent-color), rgb(120, 18, 141), rgb(159, 23, 186), #741887, #8a0aa3, #5c166a, var(--accent-color));
+    background-size: 400%;
+    animation: animate-gradient 5s linear infinite;
+    transition: 0.3s;
+    border: solid 1px;
+}
+.hero a:hover{
+    color: rgb(224, 146, 224);
+    outline: currentColor;
+    transition: 1s smooth;
+}
+
 @media (max-width: 800px) {
     .hide-on-mobile{
         display: none;
@@ -110,7 +167,7 @@ footer{
         display: block;
     }
 }
-@keyframes fade-in{
+@keyframes fade-in {
     from{
         background-color: transparent;
     }
@@ -118,11 +175,16 @@ footer{
         background-color: var(--accent-color);
     }
 }
-@keyframes split{
+@keyframes split {
     from{
-        gap: 0;
+        gap: 0px;
     }
     to{
         gap: 20px;
+    }
+}
+@keyframes animate-gradient {
+    to{
+        background-position: 400%;
     }
 }
