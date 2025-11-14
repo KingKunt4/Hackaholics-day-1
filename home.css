@@ -64,6 +64,7 @@ nav ul li a:hover{
 .sidebar{
     display: none;
     position:absolute;
+			z-index: 999;
     top: 0;
     right: 0;
     height: 80vh;
