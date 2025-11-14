@@ -66,12 +66,13 @@ nav ul li a:hover{
     position:absolute;
     top: 0;
     right: 0;
-    height: 50vh;
+    height: 80vh;
     background-color: white;
     flex-direction: column;
     align-items: flex-start;
     width: 50vw;
     font-size: 1em;
+
 }
 .sidebar img{
     width: 15px;
@@ -94,9 +95,6 @@ nav ul li a:hover{
 .sidebar ul li a:hover{
     color: var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
-}
-.sb-signup-btn{
-    color: var(--accent-color);
 }
 footer{
     margin-top: 40px;
@@ -137,7 +135,7 @@ strong{
 }
 
 
-.hero a{
+.hero-img a{
     margin-top: 2em;
     max-height: 1.5em;
     text-decoration: none;
@@ -152,10 +150,106 @@ strong{
     transition: 0.3s;
     border: solid 1px;
 }
-.hero a:hover{
+.hero-img a:hover{
     color: rgb(224, 146, 224);
     outline: currentColor;
     transition: 1s smooth;
+}
+.plan-cards{
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
+    height: auto;
+    text-align: initial;
+}
+.plan-cards h3{
+    text-align: center;
+}
+.plan-cards a{
+    margin-top: 2em;
+}
+.free{
+    position: relative;
+    border: solid 1px var(--accent-color);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.free:hover{
+    box-shadow: 2px 2px 5px #c071c57b;
+}
+.regular{
+    position: relative;
+    border: solid 1px rgb(115, 115, 233);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s
+}
+.regular:hover{
+    box-shadow: 2px 2px 5px rgba(115, 115, 233, 0.492);
+}
+.premium{
+    position: relative;
+    border: solid 1px blue;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.premium:hover{
+    box-shadow: 2px 2px  5px rgba(0, 0, 255, 0.492);
+}
+.free-btn{
+    color: white;
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    border: solid 1px var(--accent-color);
+}
+.regular-btn{
+    color: white;
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: rgb(35, 147, 232);
+    text-decoration: none;
+    font-weight: 500;
+    border: solid 1px rgb(35, 147, 232);
+    
+}
+.premium-btn{
+    color: white;
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: blue;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid blue;
+}
+.free-btn:hover{
+    background-color: transparent;
+    color: var(--accent-color);
+}
+.regular-btn:hover{
+    background-color: transparent;
+    color: rgb(27, 136, 219);
+}
+.premium-btn:hover{
+    background-color: transparent;
+    color:  blue;
+}
+.icon{
+    position: absolute;
+    z-index: 999;
+    top: -30px;
+    left: 100px;
+    width: 4em;
+    height: 4em;
+    animation:drop 1s forwards ;
+    transition: 0.3s;
 }
 
 @media (max-width: 800px) {
@@ -186,5 +280,13 @@ strong{
 @keyframes animate-gradient {
     to{
         background-position: 400%;
+    }
+}
+@keyframes drop {
+    from{
+        left: -100px;
+}
+    to{
+        left: 100px;
     }
 }

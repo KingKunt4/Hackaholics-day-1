@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <link rel="icon" href="res/icon.png" type="image/x-icon">
+        <title>Home | HACKAHOLICS</title>
+    </head>
+    <body>
+        <header>
+            <img src="res/icon.png" alt="icon">
+            <nav>
+                <ul>
+                    <li class="hide-on-mobile"><a href="home.html">home</a></li>
+                    <li class="hide-on-mobile"><a href="#projects">projects</a></li>
+                    <li class="hide-on-mobile"><a href="spaces.html">spaces</a></li>
+                    <li class="hide-on-mobile"><a href="#discover">discover</a></li>
+                    <li class="hide-on-desktop" onclick="showSideBar()"><img class="burger" src="res/burger.png" alt="burger"></li>
+                </ul>
+            </nav>
+            <div class="sidebar">
+                <ul>
+                    <li onclick="hideSideBar()"><img class="cross" src="res/cross.png" alt="cross"></li>
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="spaces.html">spaces</a></li>
+                    <li><a href="#discover">discover</a></li>
+                </ul>
+            </div>
+        </header>
+        <section  onclick="hideSideBar()" class="hero">
+            <span><h1>host a <strong>SPACE</strong> .</h1></span>
+            <p>Spaces on hackaholics is an easy and efficient way to launch a development environment to facilitate collaboration anywhere in the world.</p>
+            <div class="plan-cards">
+                <div class="free">
+                    <img class="icon" src="res/icon.png">
+                    <h3>Basic</h3>
+                    <ul>
+                        <li><p>3 max members</p></li>
+                        <li><p>3 programming language support</p></li>
+                        <li><p>1gb max file uploads</p></li>
+                        <li><p>$9.99/mo</p></li>
+                        <a href="#" class="free-btn">choose plan</a>
+                    </ul>
+                </div>
+                <div class="regular">
+                    <img class="icon" src="res/regular.jpeg">
+                    <h3>Standard</h3>
+                    <ul>
+                        <li><p>7 max members</p></li>
+                        <li><p>7 programming language support</p></li>
+                        <li><p>5gb max file uploads</p></li>
+                        <li><p>AI code reviews</p></li>  
+                        <li><p>$15.99/mo</p></li>
+                        <a href="#" class="regular-btn">choose plan</a>                 
+                    </ul>
+                </div>
+                <div class="premium">
+                    <img class="icon" src="res/premium.jpeg">
+                    <h3>Premium</h3>
+                    <ul>
+                        <li><p>15 max members</p></li>
+                        <li><p>19 programming language support</p></li>
+                        <li><p>10gb max file uploads</p></li>
+                        <li><p>AI code reviews</p></li>
+                        <li><p>AI copilot agent</p></li> 
+                        <li><p>$21.99/mo</p></li>
+                        <a href="#" class="premium-btn">choose plan</a>               
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+        <footer>
+            <p style="text-align: center; font-weight: 200;">@ 2025 Hackaholics UI. All rights reserved</p>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
